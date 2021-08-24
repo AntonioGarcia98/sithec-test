@@ -1,0 +1,99 @@
+<div class="landing"></div>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="py-5">
+        <div class="container">
+          <div class="row hidden-md-up">
+            <div class="col-md-4">
+              <div class="card">
+
+                <div class="card-body">
+                  <h5 class="card-title">Realizar prueba</h5>
+                  <div *ngIf="errorTestError" class="my-3">
+                    <p class="card-text">{{errorTestError}}</p>
+                  </div>
+                  <button class="btn btn-primary" (click)="apiCallTestError()">Presionar</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+
+                <div class="card-body">
+                  <h5 class="card-title">Realizar prueba</h5>
+                  <div *ngIf="errorTestForbidden" class="my-3">
+                   
+                    <p class="card-text">{{errorTestForbidden}}</p>
+                  </div>
+
+                  <button class="btn btn-primary" (click)="apiCallForbidden()">Presionar</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+
+                <div class="card-body">
+                  <h5 class="card-title">Realizar prueba</h5>
+                  <div *ngIf="errorTestSuccess" class="my-3">
+                  
+                    <p class="card-text">{{errorTestSuccess}}</p>
+                  </div>
+                  <button class="btn btn-primary" (click)="apiCallSuccess()">Observar error</button>
+                </div>
+              </div>
+            </div>
+          </div><br>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card">
+
+                <div class="card-body">
+                  <h5 class="card-title">Realizar prueba</h5>
+                  <div *ngIf="errorTestNotFound" class="my-3">
+                  
+                    <p class="card-text">{{errorTestNotFound}}</p>
+                  </div>
+                  <button class="btn btn-primary" (click)="apiTestNotFound()">Presionar</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+
+                <div class="card-body">
+                  <div>
+                    <h5 class="card-title">Realizar prueba</h5>
+                    <div *ngIf="errorTestSintax" class="my-4">
+                    
+                      <p class="card-text">{{errorTestSintax}}</p>
+                    </div>
+                  </div>
+                  <button class="btn btn-primary" (click)="localErrorSintaxError()">Presionar</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+
+                <div class="card-body">
+                  <h5 class="card-title">Realizar prueba</h5>
+                  <div *ngIf="errorTestUri" class="my-3">
+                   
+                    <p class="card-text">{{errorTestUri}}</p>
+                  </div>
+                  <button href="#" class="btn btn-primary" (click)="localErrorUriError()">Presionar</button>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-center my-4" style="z-index: 100;">
+              <button class="btn btn-primary" (click)="restart()">Reiniciar</button>
+            </div>
+          </div>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
